@@ -1,0 +1,141 @@
+﻿@model RegisterViewModel
+@{
+    ViewData["Title"] = "Register";
+
+    bool Registred = (bool)(ViewData["Registred"] ?? false);
+    bool IsValid = (bool)(ViewData["IsValid"] ?? false);
+}
+
+@if (Registred == false && IsValid == true)
+{
+    <div class="alert alert-warning alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <strong>Warning!</strong> აღნიშნული მეილით ან სახელით მომხმარებელი უკვე რეგისტრირებულია.
+    </div>
+}
+else if (Registred == true && IsValid == true)
+{
+    <div class="alert alert-success alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <strong>Success!</strong> რეგისტრაცია წარმატებით დასრულდა. UserName : @Model.UserName ; Password : @Model.Password
+        
+        @*მეილზე გამოიგზავნა თქვენი მომხმარებლის სახელი და პაროლი. თუ არ მოვიდა მეილზე შეამოწმეთ spam ფოლდერი.*@
+    </div>
+}
+
+<form asp-controller="Account" asp-action="Register" asp-route-returnurl="@ViewData["ReturnUrl"]" method="post" class="form-horizontal">
+    <div class="contact-page-content">
+        <div class="contact-heading">
+            <h3>ოლიმპიადისთვის რეგისტრაცია</h3>
+        </div>
+        <div class="contact-form clearfix">
+            <p class="full-row">
+                <span class="contact-label">
+                    <label for="name-id">User Name:</label>
+                </span>
+                <div class="inline-block">
+                    <input asp-for="UserName" placeholder="მომხმარებლის სახელი"> <br />
+                    <span asp-validation-for="UserName" class="text-danger"></span>
+                </div>
+            </p>
+            <p class="full-row">
+                <span class="contact-label">
+                    <label for="surname-id">New Password:</label>
+                </span>
+                <div class="inline-block">
+                    <input type="password" asp-for="Password" placeholder="შეიყვანეთ პაროლი"> <br />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+            </p>
+            <p class="full-row">
+                <span class="contact-label">
+                    <label for="surname-id">Confirm Password:</label>
+                </span>
+                <div class="inline-block">
+                    <input type="password" asp-for="ConfirmPassword" placeholder="გაიმეორეთ პაროლი"> <br />
+                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                </div>
+            </p>
+            <p class="full-row">
+                <span class="contact-label">
+                    <label for="surname-id">First Name:</label>
+                </span>
+                <div class="inline-block">
+                    <input asp-for="FirstName" placeholder="შეიყვანეთ სახელი ქართულად"> <br />
+                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                </div>
+            </p>
+            <p class="full-row">
+                <span class="contact-label">
+                    <label for="surname-id">Last Name:</label>
+                </span>
+                <div class="inline-block">
+                    <input asp-for="LastName" placeholder="შეიყვანეთ გვარი ქართულად"> <br />
+                    <span asp-validation-for="LastName" class="text-danger"></span>
+                </div>
+            </p>
+            <p class="full-row">
+                <span class="contact-label">
+                    <label for="surname-id">PersonalID:</label>
+                </span>
+                <div class="inline-block">
+                    <input asp-for="PersonalID" placeholder="პირადი ნომერი"> <br />
+                    <span asp-validation-for="PersonalID" class="text-danger"></span>
+                </div>
+            </p>
+            <p class="full-row">
+                <span class="contact-label">
+                    <label for="surname-id">Email:</label>
+                </span>
+                <div class="inline-block">
+                    <input asp-for="Email" placeholder="ელ-ფოსტა"> <br />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+            </p>
+            <p class="full-row">
+                <span class="contact-label">
+                    <label for="email-id">Phone:</label>
+                </span>
+                <div class="inline-block">
+                    <input asp-for="Phone" placeholder="ტელეფონი"> <br />
+                    <span asp-validation-for="Phone" class="text-danger"></span>
+                </div>
+            </p>
+            <p class="full-row">
+                <span class="contact-label">
+                    <label for="email-id">Region:</label>
+                </span>
+                <div class="inline-block">
+                    <input asp-for="Region" placeholder="რეგიონი"> <br />
+                    <span asp-validation-for="Region" class="text-danger"></span>
+                </div>
+            </p>
+            <p class="full-row">
+                <span class="contact-label">
+                    <label for="email-id">School:</label>
+                </span>
+                <div class="inline-block">
+                    <input asp-for="School" placeholder="სკოლა"> <br />
+                    <span asp-validation-for="School" class="text-danger"></span>
+                </div>
+            </p>
+            <p class="full-row">
+                <span class="contact-label">
+                    <label for="email-id">Class:</label>
+                </span>
+                <div class="input-select inline-block">
+                    <select asp-for="Class" asp-items="ViewBag.Classes"></select>
+                    <span asp-validation-for="Class" class="text-danger"></span>
+                </div>
+            </p>
+
+            <p class="full-row">
+                <input class="mainBtn" type="submit" name="" value="Send Message">
+            </p>
+        </div>
+    </div>
+</form>
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}

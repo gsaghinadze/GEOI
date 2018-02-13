@@ -1,0 +1,15 @@
+services charva:
+
+systemctl start/stop/restart/status geoi.service
+
+ssh shesvla:
+
+ssh root@139.59.154.180
+
+proeqtis folder:
+
+var/aspnetcore/geoi
+
+build:
+
+dotnet publish

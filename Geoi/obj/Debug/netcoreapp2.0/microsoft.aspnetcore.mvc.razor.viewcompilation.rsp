@@ -1,0 +1,17 @@
+D:\projects\GEOI\Geoi
+--output-path=obj\Debug\netcoreapp2.0\
+--application-name=Geoi
+--content-root=D:\projects\GEOI\Geoi
+--file=D:\projects\GEOI\Geoi\Views\Account\Register.cshtml
+--file=D:\projects\GEOI\Geoi\Views\Home\About.cshtml
+--file=D:\projects\GEOI\Geoi\Views\Home\AboutUs.cshtml
+--file=D:\projects\GEOI\Geoi\Views\Home\Contact.cshtml
+--file=D:\projects\GEOI\Geoi\Views\Home\GEOI2017.cshtml
+--file=D:\projects\GEOI\Geoi\Views\Home\Index.cshtml
+--file=D:\projects\GEOI\Geoi\Views\Home\Instruction.cshtml
+--file=D:\projects\GEOI\Geoi\Views\Shared\Error.cshtml
+--file=D:\projects\GEOI\Geoi\Views\Shared\_Layout.cshtml
+--file=D:\projects\GEOI\Geoi\Views\Shared\_LoginPartial.cshtml
+--file=D:\projects\GEOI\Geoi\Views\Shared\_ValidationScriptsPartial.cshtml
+--file=D:\projects\GEOI\Geoi\Views\_ViewImports.cshtml
+--file=D:\projects\GEOI\Geoi\Views\_ViewStart.cshtml

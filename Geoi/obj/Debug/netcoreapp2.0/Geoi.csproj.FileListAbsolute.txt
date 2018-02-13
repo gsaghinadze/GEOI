@@ -1,0 +1,12 @@
+D:\projects\GEOI\Geoi\bin\Debug\netcoreapp2.0\app.db
+D:\projects\GEOI\Geoi\bin\Debug\netcoreapp2.0\Geoi.deps.json
+D:\projects\GEOI\Geoi\bin\Debug\netcoreapp2.0\Geoi.runtimeconfig.json
+D:\projects\GEOI\Geoi\bin\Debug\netcoreapp2.0\Geoi.runtimeconfig.dev.json
+D:\projects\GEOI\Geoi\bin\Debug\netcoreapp2.0\Geoi.dll
+D:\projects\GEOI\Geoi\bin\Debug\netcoreapp2.0\Geoi.pdb
+D:\projects\GEOI\Geoi\obj\Debug\netcoreapp2.0\Geoi.csproj.CoreCompileInputs.cache
+D:\projects\GEOI\Geoi\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+D:\projects\GEOI\Geoi\obj\Debug\netcoreapp2.0\Geoi.AssemblyInfoInputs.cache
+D:\projects\GEOI\Geoi\obj\Debug\netcoreapp2.0\Geoi.AssemblyInfo.cs
+D:\projects\GEOI\Geoi\obj\Debug\netcoreapp2.0\Geoi.dll
+D:\projects\GEOI\Geoi\obj\Debug\netcoreapp2.0\Geoi.pdb

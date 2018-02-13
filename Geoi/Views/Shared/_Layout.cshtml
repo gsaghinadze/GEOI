@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewData["Title"]</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="College Education Responsive Template">
+    <meta name="author" content="Esmet">
+    <meta charset="UTF-8">
+
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- CSS Bootstrap & Custom -->
+    <link href="~/bootstrap/css/bootstrap.css" rel="stylesheet" media="screen">
+    <link href="~/css/font-awesome.min.css" rel="stylesheet" media="screen">
+    <link href="~/css/animate.css" rel="stylesheet" media="screen">
+
+    <link href="~/style.css" rel="stylesheet" media="screen">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="/images/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="/images/ico/favicon.ico">
+
+    <!-- JavaScripts -->
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="~/js/modernizr.js"></script>
+    <!--[if lt IE 8]>
+    <div style=' clear: both; text-align:center; position: relative;'>
+            <a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" alt="" /></a>
+        </div>
+    <![endif]-->
+</head>
+<body>
+    <!-- This one in here is responsive menu for tablet and mobiles -->
+    <div class="responsive-navigation visible-sm visible-xs">
+        <a href="#" class="menu-toggle-btn">
+            <i class="fa fa-bars"></i>
+        </a>
+        <div class="responsive_menu">
+            <ul class="main_menu">
+                <li><a href="~/Home/GEOI2017">GEOI2017</a></li>
+                <li><a href="~/Home/About">ოლიმპიადის შესახებ</a></li>
+                <li><a href="~/Home/Instruction">ინსტრუქცია</a></li>
+                <li><a href="~/Home/AboutUs">ასოციაციის შესახებ</a></li>
+                <li><a href="~/Home/Contact">კონტაქტი</a></li>
+                <li><a href="~/Account/Register">რეგისტრაცია</a></li>
+            </ul> <!-- /.main_menu -->
+        </div> <!-- /.responsive_menu -->
+    </div> <!-- /responsive_navigation -->
+    <header class="site-header">
+        <div class="container">
+            <div class="row">
+                    <div class="logo">
+                        <a href="~/Home" id="logo" rel="home">
+                            ეროვნული ოლიმპიადა ინფორმატიკაში
+                        </a>
+                    </div> <!-- /.logo -->
+            </div>
+        </div> <!-- /.container -->
+
+        <div class="nav-bar-main" role="navigation">
+            <div class="container">
+                <nav class="main-navigation clearfix visible-md visible-lg" role="navigation">
+                    <ul class="main-menu sf-menu">
+                        <li><a href="~/Home/GEOI2017">GEOI2017</a></li>
+                        <li><a href="~/Home/About">ოლიმპიადის შესახებ</a></li>
+                        <li><a href="~/Home/Instruction">ინსტრუქცია</a></li>
+                        <li><a href="~/Home/AboutUs">ასოციაციის შესახებ</a></li>
+                        <li><a href="~/Home/Contact">კონტაქტი</a></li>
+                        <li><a href="~/Account/Register">რეგისტრაცია</a></li>
+                    </ul> <!-- /.main-menu -->
+                </nav> <!-- /.main-navigation -->
+            </div> <!-- /.container -->
+        </div> <!-- /.nav-bar-main -->
+
+    </header> <!-- /.site-header -->
+
+    <div class="container">
+        <div class="row">
+
+            <!-- Here begin Main Content -->
+            <div class="col-md-9">
+                
+                @RenderBody()
+
+            </div> <!-- /.col-md-8 -->
+            <!-- Here begin Sidebar -->
+            <div class="col-md-3">
+
+                <div class="widget-main">
+                    @*<div class="widget-main-title">
+                        <h4 class="widget-title">სპონსორები</h4>
+                    </div>*@
+                    <div class="widget-inner">
+                        <div class="our-campus clearfix">
+                            <ul>
+                                <li><a href="~/Home"><img class="img-responsive" src="~/images/logos/asociacia.jpg" alt=""></a></li>
+                                <li><a href="https://www.ibsu.edu.ge" target="_blank"><img class="img-responsive" src="~/images/logos/ibsu.jpg" alt=""></a></li>
+                                <li><a href="https://www.magticom.ge/" target="_blank"><img class="img-responsive" src="~/images/logos/magti.png" alt=""></a></li>
+                                <li><a href="http://www.singular.ge/geo/" target="_blank"><img class="img-responsive" src="~/images/logos/singular.jpg" alt=""></a></li>
+                                <li><a href="https://www.ug.edu.ge/" target="_blank"><img class="img-responsive" src="~/images/logos/ug.jpg" alt=""></a></li>
+                            </ul>
+                        </div>
+                    </div> <!-- /.widget-inner -->
+                </div> <!-- /.widget-main -->
+
+            </div>
+        </div>
+    </div>
+    
+    <!-- begin The Footer -->
+    <footer class="site-footer">
+        <div class="container">
+
+            <div class="bottom-footer">
+                <div class="row">
+                    <div class="col-md-5">
+                        <p class="small-text">&copy; Copyright @DateTime.Now.Year.</p>
+                    </div> <!-- /.col-md-5 -->
+                </div> <!-- /.row -->
+            </div> <!-- /.bottom-footer -->
+
+        </div> <!-- /.container -->
+    </footer> <!-- /.site-footer -->
+
+    <script src="~/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/js/plugins.js"></script>
+    <script src="~/js/custom.js"></script>
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>
